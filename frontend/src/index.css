@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Custom Color Palette */
+  --color-air-force-blue-50: #f0f3f5;
+  --color-air-force-blue-100: #e0e7eb;
+  --color-air-force-blue-200: #c1cfd7;
+  --color-air-force-blue-300: #a2b7c3;
+  --color-air-force-blue-400: #849fae;
+  --color-air-force-blue-500: #65889a;
+  --color-air-force-blue-600: #516c7b;
+  --color-air-force-blue-700: #3c515d;
+  --color-air-force-blue-800: #28363e;
+  --color-air-force-blue-900: #141b1f;
+  --color-air-force-blue-950: #0e1316;
+
+  --color-dusty-taupe-50: #f4f2f1;
+  --color-dusty-taupe-100: #e8e6e3;
+  --color-dusty-taupe-200: #d2ccc6;
+  --color-dusty-taupe-300: #bbb3aa;
+  --color-dusty-taupe-400: #a4998e;
+  --color-dusty-taupe-500: #8e8071;
+  --color-dusty-taupe-600: #71665b;
+  --color-dusty-taupe-700: #554d44;
+  --color-dusty-taupe-800: #39332d;
+  --color-dusty-taupe-900: #1c1a17;
+  --color-dusty-taupe-950: #141210;
+
+  --color-vanilla-custard-50: #f8f6ec;
+  --color-vanilla-custard-100: #f2eed9;
+  --color-vanilla-custard-200: #e4dcb4;
+  --color-vanilla-custard-300: #d7cb8e;
+  --color-vanilla-custard-400: #caba68;
+  --color-vanilla-custard-500: #bda842;
+  --color-vanilla-custard-600: #978735;
+  --color-vanilla-custard-700: #716528;
+  --color-vanilla-custard-800: #4b431b;
+  --color-vanilla-custard-900: #26220d;
+  --color-vanilla-custard-950: #1a1809;
+
+  --color-sunlit-clay-50: #faf4ea;
+  --color-sunlit-clay-100: #f5e9d6;
+  --color-sunlit-clay-200: #ebd2ad;
+  --color-sunlit-clay-300: #e1bc84;
+  --color-sunlit-clay-400: #d7a55b;
+  --color-sunlit-clay-500: #cd8f32;
+  --color-sunlit-clay-600: #a47228;
+  --color-sunlit-clay-700: #7b561e;
+  --color-sunlit-clay-800: #523914;
+  --color-sunlit-clay-900: #291d0a;
+  --color-sunlit-clay-950: #1d1407;
+
+  --color-light-bronze-50: #f9f2eb;
+  --color-light-bronze-100: #f3e6d8;
+  --color-light-bronze-200: #e8cdb0;
+  --color-light-bronze-300: #dcb489;
+  --color-light-bronze-400: #d09b62;
+  --color-light-bronze-500: #c4823b;
+  --color-light-bronze-600: #9d682f;
+  --color-light-bronze-700: #764e23;
+  --color-light-bronze-800: #4f3417;
+  --color-light-bronze-900: #271a0c;
+  --color-light-bronze-950: #1b1208;
+
+  /* Custom Font Families */
+  --font-family-serif: "Playfair Display", serif;
+  --font-family-sans: "Lato", sans-serif;
+  --font-family-mono: "Courier Prime", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-vanilla-custard-50 text-air-force-blue-900 font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-air-force-blue-800;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-air-force-blue-600 text-white px-6 py-2 rounded-sm hover:bg-air-force-blue-700 transition-colors font-serif tracking-wide shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-dusty-taupe-200 text-dusty-taupe-900 px-6 py-2 rounded-sm hover:bg-dusty-taupe-300 transition-colors font-serif tracking-wide;
+  }
+
+  .input-vintage {
+    @apply w-full p-3 border-b-2 border-dusty-taupe-200 bg-transparent focus:border-air-force-blue-500 focus:outline-none transition-colors font-mono text-sm;
+  }
+
+  .card-vintage {
+    @apply bg-white border border-dusty-taupe-100 shadow-sm hover:shadow-md transition-shadow p-6;
+  }
+}
