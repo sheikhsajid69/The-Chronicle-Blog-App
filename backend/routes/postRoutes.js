@@ -19,12 +19,12 @@ const { isAuthorOrAdmin, isAdmin } = require('../middleware/roleMiddleware');
 router.get('/', getPosts);
 router.get('/tags', getTags);
 router.get('/categories', getCategories);
-router.get('/:id', optionalAuth, getPostById); // Optional auth to check private/draft posts ownership
 
 // Protected routes
 router.use(protect);
 
 router.get('/my-posts', getMyPosts);
+router.get('/:id', optionalAuth, getPostById); // Optional auth to check private/draft posts ownership
 router.post('/', isAdmin, createPost);
 router.put('/:id', isAuthorOrAdmin, updatePost);
 router.delete('/:id', isAuthorOrAdmin, deletePost);

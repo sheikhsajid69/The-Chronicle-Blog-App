@@ -45,7 +45,8 @@ const postSchema = new mongoose.Schema(
 );
 
 // Create index for search and filtering
-postSchema.index({ title: 'text', content: 'text', tags: 1, category: 1 });
+postSchema.index({ title: 'text', content: 'text' });
+postSchema.index({ tags: 1, category: 1 });
 
 // Generate excerpt from content if not provided
 postSchema.pre('save', function (next) {
